@@ -13,6 +13,7 @@ Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/pdfedit/%{name}-%{version}.tar.bz2
 # Source0-md5:	e4ed098f70a4c5675b16b22641f5a182
 URL:		http://pdfedit.petricek.net/
+BuildRequires:	autoconf
 BuildRequires:	boost-devel
 BuildRequires:	boost-call_traits-devel
 BuildRequires:	libpaper-devel
