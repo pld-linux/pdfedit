@@ -1,3 +1,8 @@
+#
+# TODO:
+#	- don't package entire doc subdirectory as %doc, make install creates
+#	  much more reasonable directory structure
+#
 Summary:	Editor for manipulating PDF documents
 Summary(pl.UTF-8):	Edytor do manipulowania dokumentami PDF
 Name:		pdfedit
@@ -9,13 +14,18 @@ Source0:	http://dl.sourceforge.net/pdfedit/%{name}-%{version}.tar.bz2
 # Source0-md5:	e4ed098f70a4c5675b16b22641f5a182
 URL:		http://pdfedit.petricek.net/
 BuildRequires:	boost-devel
+BuildRequires:	boost-call_traits-devel
+BuildRequires:	libpaper-devel
+BuildRequires:	motif-devel
 BuildRequires:	qmake
 BuildRequires:	qt-devel
+BuildRequires:	t1lib-devel
+BuildRequires:	xorg-lib-libXaw-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Complete editing of pdf documents is made possible with PDFedit. You
-can change either raw pdf objects (for advanced users) or use
+Complete editing of PDF documents is made possible with PDFedit. You
+can change either raw PDF objects (for advanced users) or use
 predefined gui functions. Functions can be easily added as everything
 is based on a scripts.
 
