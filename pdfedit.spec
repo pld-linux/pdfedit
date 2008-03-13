@@ -35,13 +35,21 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Complete editing of PDF documents is made possible with PDFedit. You
 can change either raw PDF objects (for advanced users) or use
-predefined gui functions. Functions can be easily added as everything
+predefined GUI functions. Functions can be easily added as everything
 is based on a scripts.
 
 Scripting is used to a great extent in editor and almost anything can
 be scripted, it is possible to create own scripts or plugins.
 
-#description -l pl.UTF-8
+%description -l pl.UTF-8
+PDFedit umożliwia pełną edycję dokumentów PDF. Można modyfikować
+surowe obiekty PDF (dla zaawansowanych użytkowników) lub używać
+predefiniowanych funkcji interfejsu graficznego. Można łatwo dodawać
+własne funkcje, jako że wszystko jest oparte na skryptach.
+
+Skrypty pozwalają w znaczny sposób rozszerzać edytor i prawie wszystko
+można osiągnąć z poziomu skryptów; można tworzyć własne skrypty i
+wtyczki.
 
 %prep
 %setup -q
