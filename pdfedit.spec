@@ -2,6 +2,14 @@
 # TODO:
 #	- don't package entire doc subdirectory as %doc, make install creates
 #	  much more reasonable directory structure
+#	- fix default fontpath for ghostscript fonts as now it seeks
+#		/usr/share/ghostscript/fonts/
+#		/usr/local/share/ghostscript/fonts/
+#		/usr/share/fonts/default/Type1/
+#		/usr/share/fonts/default/ghostscript/
+#		/usr/share/fonts/type1/gsfonts/
+#	  instead of /usr/share/fonts/Type1/
+#	  userspace solution: echo fontDir /usr/share/fonts/Type1 >> ~/.xpdfrc
 #
 Summary:	Editor for manipulating PDF documents
 Summary(pl.UTF-8):	Edytor do manipulowania dokumentami PDF
