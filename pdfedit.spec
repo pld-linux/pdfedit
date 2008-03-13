@@ -6,12 +6,12 @@
 Summary:	Editor for manipulating PDF documents
 Summary(pl.UTF-8):	Edytor do manipulowania dokumentami PDF
 Name:		pdfedit
-Version:	0.3.2
-Release:	0.1
+Version:	0.4.1
+Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/pdfedit/%{name}-%{version}.tar.bz2
-# Source0-md5:	e4ed098f70a4c5675b16b22641f5a182
+# Source0-md5:	05fdd1d995b863709b7130ca8ed5b431
 URL:		http://pdfedit.petricek.net/
 BuildRequires:	autoconf
 BuildRequires:	boost-devel
@@ -37,6 +37,8 @@ be scripted, it is possible to create own scripts or plugins.
 
 %prep
 %setup -q
+# remove bashizm, we use dynamic linking anyway
+sed -e 's/{so,a}/so/g' -i config/boost_iostreams.m4
 
 %build
 export QTDIR="%{_prefix}"
@@ -45,7 +47,8 @@ export QMAKESPEC="linux-g++"
 %configure
 %{__make} \
 	CC="%{__cc}" \
-	CXX="%{__cxx}"
+	CXX="%{__cxx}" \
+	%{?debug:--disable-release}
 
 %install
 rm -rf $RPM_BUILD_ROOT
