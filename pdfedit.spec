@@ -22,8 +22,7 @@ Source0:	http://dl.sourceforge.net/pdfedit/%{name}-%{version}.tar.bz2
 # Source0-md5:	05fdd1d995b863709b7130ca8ed5b431
 URL:		http://pdfedit.petricek.net/
 BuildRequires:	autoconf
-BuildRequires:	boost-devel
-BuildRequires:	boost-call_traits-devel
+BuildRequires:	boost-devel >= 1.35.0
 BuildRequires:	libpaper-devel
 BuildRequires:	motif-devel
 BuildRequires:	qmake
