@@ -14,7 +14,7 @@
 Summary:	Editor for manipulating PDF documents
 Summary(pl.UTF-8):	Edytor do manipulowania dokumentami PDF
 Name:		pdfedit
-Version:	0.4.3
+Version:	0.4.5
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
@@ -27,6 +27,7 @@ BuildRequires:	libpaper-devel
 BuildRequires:	motif-devel
 BuildRequires:	qmake
 BuildRequires:	qt-devel
+BuildRequires:	qt-linguist
 BuildRequires:	t1lib-devel
 BuildRequires:	xorg-lib-libXaw-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
