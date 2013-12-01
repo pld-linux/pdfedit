@@ -18,8 +18,8 @@ Version:	0.4.5
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://dl.sourceforge.net/pdfedit/%{name}-%{version}.tar.bz2
-# Source0-md5:	98eb8d8d42027241c10a5c9bedacc20e
+Source0:	http://download.sourceforge.net/pdfedit/%{name}-%{version}.tar.bz2
+# Source0-md5:	80502ee7f08cdfb867ffdaa92d160a23
 URL:		http://pdfedit.petricek.net/
 BuildRequires:	autoconf
 BuildRequires:	boost-devel >= 1.35.0
