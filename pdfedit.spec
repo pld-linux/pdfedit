@@ -20,6 +20,7 @@ License:	GPL v2
 Group:		X11/Applications
 Source0:	http://download.sourceforge.net/pdfedit/%{name}-%{version}.tar.bz2
 # Source0-md5:	80502ee7f08cdfb867ffdaa92d160a23
+Patch0:		pdfedit-fixbuild.patch
 URL:		http://pdfedit.petricek.net/
 BuildRequires:	autoconf
 BuildRequires:	boost-devel >= 1.35.0
@@ -53,6 +54,8 @@ wtyczki.
 
 %prep
 %setup -q
+%patch0 -p1
+
 # remove bashizms
 sed -e 's/function //g' -i getversion tools/generate_lang.sh
 
