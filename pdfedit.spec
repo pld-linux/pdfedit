@@ -54,7 +54,7 @@ wtyczki.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 # remove bashizms
 sed -e 's/function //g' -i getversion tools/generate_lang.sh
